@@ -13,22 +13,22 @@ data: 20/02/21 15:51
 #include <windows.h>
 //#include <time.h>
 
-//#define MAX 3
+#define MAX 5
 
-// PROTÓTIPOS
+////PROTÓTIPOS
 int leValidaPonto();
 int inicioJogo(int tab[MAX][MAX]);
 int apresentarTabuleiro(int tab[MAX][MAX], int x);
 int menuDificuldade();
 
 int main(void){
-//	DESCLARAÇÕES
+////DESCLARAÇÕES
 	char nome[30], dificuldade;
 	int acertos, total, axisX, axisY, linha, coluna, qtdJogadores, fim;
 	int tabuleiro[MAX][MAX];
 	total = axisX = axisY = linha = coluna = 0;
 	
-//	INSTRUÇÕES	
+////INSTRUÇÕES	
 
 	//MENU DE JOGADORES
 
@@ -54,7 +54,8 @@ int main(void){
 			//printf("ACERTO MIZERAVI");
 			//printf("\n\n");
 			tabuleiro[axisX][axisY] = 9;	//escolhi esse num para ficar mais "visível"
-		} else{			
+		} 
+		if(tabuleiro[axisX][axisY] == 0){			
 			//printf("\n\n");
 			//printf("EROU!");
 			//printf("\n\n");
@@ -79,12 +80,14 @@ int main(void){
 	return 0;
 }
 
-// FUNÇÕES
+////FUNÇÕES
 
 	//MENUS
 int menuDificuldade(){
 	int cont = 0, dif = 0;
 	char caracter;
+	
+	//ainda estou implementando a dific
 	do{
 		if((cont == 0) || (cont == 2) || (cont == 5)){
 			printf("\nSELECIONE A DIFICULDADE: ");
